@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Title of the Page -->
+    <h1 id="title">Survey Form</h1>
+
+    <!-- Description of the Survey -->
+    <p id="description">Please fill out this survey form below:</p>
+
+    <!-- Form Start -->
+    <form id="survey-form" action="/submit" method="POST">
+
+        <!-- Personal Information Fieldset -->
+        <fieldset>
+            <legend>Personal Information</legend>
+
+            <!-- Name Input -->
+            <label for="name" id="name-label">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+            <!-- Email Input -->
+            <label for="email" id="email-label">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+            <!-- Number Input -->
+            <label for="number" id="number-label">Age:</label>
+            <input type="number" id="number" name="age" placeholder="Enter your age" min="1" max="120" required>
+        </fieldset>
+
+        <!-- Survey Questions Fieldset -->
+        <fieldset>
+            <legend>Survey Questions</legend>
+
+            <!-- Dropdown Input -->
+            <label for="dropdown">Which option best describes you?</label>
+            <select id="dropdown" name="role" required>
+                <option value="">-- Select an option --</option>
+                <option value="student">Student</option>
+                <option value="professional">Professional</option>
+                <option value="other">Other</option>
+            </select>
+
+            <!-- Radio Button Group -->
+            <p>How did you hear about us?</p>
+            <label><input type="radio" name="referral" value="friends" required> Friends</label>
+            <label><input type="radio" name="referral" value="internet"> Internet</label>
+            <label><input type="radio" name="referral" value="other"> Other</label>
+
+            <!-- Checkbox Group -->
+            <p>Which services are you interested in?</p>
+            <label><input type="checkbox" name="services" value="webdev"> Web Development</label>
+            <label><input type="checkbox" name="services" value="appdev"> App Development</label>
+            <label><input type="checkbox" name="services" value="design"> Design</label>
+        </fieldset>
+
+        <!-- Comments Fieldset -->
+        <fieldset>
+            <legend>Additional Information</legend>
+
+            <!-- Textarea for Additional Comments -->
+            <label for="comments">Additional Comments:</label>
+            <textarea id="comments" name="comments" placeholder="Enter your comments here..."></textarea>
+        </fieldset>
+
+        <!-- Submit Button -->
+        <button type="submit" id="submit">Submit</button>
+
+    </form>
+
+</body>
+</html>

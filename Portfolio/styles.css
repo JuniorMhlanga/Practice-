@@ -1,0 +1,188 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Color Scheme */
+:root {
+    --primary-color: #4a90e2;
+    --secondary-color: #333;
+    --background-color: #f4f4f9;
+    --text-color: #333;
+    --accent-color: #ff7f50;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Navbar */
+#navbar {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    background: var(--secondary-color);
+    padding: 15px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+}
+
+#navbar ul {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+#navbar ul li {
+    list-style: none;
+}
+
+#navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 8px 15px;
+    border-radius: 4px;
+    transition: background 0.3s;
+}
+
+#navbar ul li a:hover {
+    background: var(--primary-color);
+    color: #fff;
+}
+
+/* Welcome Section with Background Image */
+#welcome-section {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    padding: 0 20px;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                url('./IMG_2663.JPG') center/cover no-repeat;
+    /* Fallback color in case image doesn't load */
+    background-color: #333;
+}
+
+#welcome-section h1 {
+    font-size: 2.8rem;
+    margin-bottom: 15px;
+}
+
+#welcome-section p {
+    font-size: 1.2rem;
+    max-width: 600px;
+}
+
+/* Projects Section */
+#projects {
+    padding: 80px 20px;
+    text-align: center;
+    width: 100%;
+}
+
+#projects h2 {
+    font-size: 2.2rem;
+    margin-bottom: 30px;
+    color: var(--primary-color);
+}
+
+.project-tile {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px auto;
+    width: 80%;
+    max-width: 350px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-tile:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+.project-tile h3 {
+    font-size: 1.4rem;
+    color: var(--secondary-color);
+    margin-bottom: 10px;
+}
+
+.project-tile p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.project-tile a {
+    color: var(--primary-color);
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.project-tile a:hover {
+    color: var(--accent-color);
+}
+
+/* Contact Section */
+#contact {
+    padding: 60px 20px;
+    text-align: center;
+    width: 100%;
+    background: #f9f9f9;
+}
+
+#contact h2 {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+#contact p {
+    font-size: 1.1rem;
+}
+
+#contact a {
+    color: var(--primary-color);
+    text-decoration: underline;
+    transition: color 0.3s;
+}
+
+#contact a:hover {
+    color: var(--accent-color);
+}
+
+/* Media Queries */
+@media (max-width: 600px) {
+    #welcome-section h1 {
+        font-size: 2.2rem;
+    }
+
+    #navbar ul {
+        flex-direction: column;
+        padding: 20px 0;
+    }
+
+    #navbar ul li {
+        margin: 10px 0;
+    }
+
+    .project-tile {
+        width: 90%;
+    }
+}

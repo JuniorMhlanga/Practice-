@@ -1,0 +1,170 @@
+/* Center and Responsive Styles */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+    text-align: center;
+}
+
+/* Header */
+header {
+    background: #333;
+    color: #fff;
+    padding: 30px 0;
+}
+
+header h1, header h2 {
+    margin: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.intro {
+    padding: 20px;
+}
+
+.intro .cta {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* Section Titles */
+section h2 {
+    margin: 20px 0;
+    font-size: 1.8em;
+}
+
+/* Content Sections */
+.personal-background, .technical-skills, .soft-skills, .project-showcase {
+    margin: 20px auto;
+    max-width: 800px;
+    padding: 10px;
+}
+
+/* Projects */
+.project {
+    background: #e8e8e8;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+}
+
+.project h3 {
+    margin-bottom: 10px;
+}
+
+.project a {
+    display: inline-block;
+    margin-right: 10px;
+    color: #007bff;
+    text-decoration: none;
+}
+
+/* Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px auto;
+    max-width: 600px;
+}
+
+form input, form textarea {
+    margin: 5px 0;
+    padding: 10px;
+    width: 80%;
+    max-width: 400px;
+}
+
+form button {
+    padding: 10px 20px;
+    background: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Social Media Links */
+.social-media a {
+    color: #333;
+    text-decoration: none;
+    margin-right: 10px;
+    font-size: 1.2em;
+}
+
+#resume {
+    margin: 20px;
+}
+
+#resume a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .intro .cta {
+        padding: 12px 25px;
+        font-size: 1.1em;
+    }
+
+    .personal-background, .technical-skills, .soft-skills, .project-showcase, form {
+        width: 90%;
+        padding: 5px;
+    }
+
+    header h1 {
+        font-size: 1.8em;
+    }
+
+    header h2 {
+        font-size: 1.2em;
+    }
+
+    section h2 {
+        font-size: 1.5em;
+    }
+
+    form input, form textarea {
+        width: 90%;
+    }
+
+    .social-media a {
+        font-size: 1em;
+    }
+
+    #resume {
+        font-size: 1.2em;
+    }
+}

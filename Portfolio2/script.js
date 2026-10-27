@@ -19,3 +19,21 @@ themeToggle.addEventListener("click", () => {
     setTheme(theme);
     localStorage.setItem("portfolio-theme", theme);
 });
+
+const contactForm = document.querySelector("#contact-form");
+
+contactForm?.addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    const formData = new FormData(contactForm);
+    const subject = formData.get("subject");
+    const body = [
+        `Name: ${formData.get("name")}`,
+        `Email: ${formData.get("email")}`,
+        "",
+        formData.get("message"),
+    ].join("\n");
+    const mailto = `mailto:Mhlangajunior907@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+    window.location.href = mailto;
+});
